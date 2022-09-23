@@ -9,14 +9,7 @@
 	<mvc:annotation-driven></mvc:annotation-driven><!-- mvc기본태그 -->
 	<mvc:default-servlet-handler/><!-- mvc기본태그 -->
 
-<<<<<<< HEAD
 <mvc:view-controller path="/" view-name="/main"/> <!-- main.jsp불러오는거 -->
-=======
-
-<!-- <mvc:view-controller path="/" view-name="main"/>  --> <!-- 삭제 MainController에서 사용 -->
-<mvc:view-controller path="/" view-name="/main"/>
-
-
 
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>
 <mvc:resources location="/WEB-INF/views/css/" mapping="/css/**"/>
@@ -36,15 +29,9 @@
 
 
 
->>>>>>> branch 'main' of https://github.com/gituser10003/DMN_Manager_Project.git
-
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="prefix" value="/WEB-INF/views/"></property>
 	<property name="suffix" value=".jsp"></property>
 </bean>
-<<<<<<< HEAD
-=======
-
->>>>>>> branch 'main' of https://github.com/gituser10003/DMN_Manager_Project.git
 	
 </beans>

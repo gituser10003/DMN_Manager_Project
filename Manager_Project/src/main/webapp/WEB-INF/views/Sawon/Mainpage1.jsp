@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>관리자 로그인 페이지</title>
-<link href="../css/Mainpage1.css?ver=1.1" rel="stylesheet" type="text/css">
+<link href="css/Mainpage1.css?ver=1" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="intro">
@@ -31,7 +31,7 @@
    <a href="Page2.jsp">관리자 로그인</a>
    </div>
    <div class="signup">
-   <a href="Page3.jsp">회원가입</a>
+   <a style="color: white" href="Page3.jsp">회원가입</a>
    </div>
    
 </div>
