@@ -14,6 +14,9 @@ public class SawonService {
 @Autowired
 SawonDAO dao;
 
+public List<SawonDTO> list() {
+	return dao.list();
+}
 //public List<SawonDTO> sawonList(String string) {
 //	List<SawonDTO> list= dao.sawonList(gCategory);
 //	return list;
