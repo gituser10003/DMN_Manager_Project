@@ -12,6 +12,7 @@
 
 <!-- <mvc:view-controller path="/" view-name="main"/>  --> <!-- 삭제 MainController에서 사용 -->
 <mvc:view-controller path="/" view-name="/main"/>
+<mvc:view-controller path="/list" view-name="/list"/>
 
 
 
