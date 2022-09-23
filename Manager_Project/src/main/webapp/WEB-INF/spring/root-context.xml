@@ -19,11 +19,18 @@
 	
 	<!-- 3.SqlSessionFactoryBean -->
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+<<<<<<< HEAD
 	<property name="dataSource" ref="dataSource"></property>
 	<property name="mapperLocations">
 		<list>
 				<value>classpath:com/config/ProductMapper.xml</value>
+=======
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations">
+			<list>
+>>>>>>> branch 'main' of https://github.com/gituser10003/DMN_Manager_Project.git
 				<value>classpath:com/config/SawonMapper.xml</value>
+<<<<<<< HEAD
 				<value>classpath:com/config/OptMapper.xml</value>				
 				<value>classpath:com/config/MemberMapper.xml</value>				
 				<value>classpath:com/config/CategoryMapper.xml</value>
@@ -32,6 +39,16 @@
 	</property>
 	<property name="typeAliases">
 		<list>
+=======
+		<!-- 		<value>classpath:com/config/OptMapper.xml</value>			
+				<value>classpath:com/config/MemberMapper.xml</value>
+				<value>classpath:com/config/ProductMapper.xml</value>		
+				<value>classpath:com/config/CategoryMapper.xml</value>			 -->	
+			</list>		
+		</property>
+		<property name="typeAliases">
+			<list>
+>>>>>>> branch 'main' of https://github.com/gituser10003/DMN_Manager_Project.git
 				<value>com.dto.SawonDTO</value>
 		</list>
 	</property>
