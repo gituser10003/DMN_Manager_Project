@@ -1,13 +1,8 @@
 package com.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.dto.SawonDTO;
 
 import com.service.SawonService;
 
@@ -16,16 +11,29 @@ public class MainController {
 @Autowired
 SawonService service;
 
-//@RequestMapping("/")
-//public String main() {
-//		return "main";
-//}
-@RequestMapping("/list")
-public String list(Model m) {//list.jsp
-System.out.println("list() 호출=====");
-List<SawonDTO> list=service.list();
-System.out.println(list);
-m.addAttribute("list", list);
-return "list";
+@RequestMapping("/main")
+public String main() {
+		return "main";//main.jsp
 }
+
+@RequestMapping("/main2")
+public String main2() {
+		return "main";//main.jsp
+}
+
+@RequestMapping("/main3")
+public String main3() {
+		return "main";//main.jsp
+}
+
+@RequestMapping("/main4")
+public String main4() {
+		return "main";//main.jsp
+}
+
+@RequestMapping("/main5")
+public String main5() {
+		return "main";//main.jsp
+}
+
 }
