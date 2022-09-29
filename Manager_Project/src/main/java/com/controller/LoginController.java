@@ -12,10 +12,7 @@ public class LoginController {
 @Autowired
 SawonService service;
 
-@RequestMapping(value = "/main",method = RequestMethod.GET)
-public String main() {
-		return "main";
-}
+
 
 
 

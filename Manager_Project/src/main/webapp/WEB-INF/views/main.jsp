@@ -18,7 +18,6 @@
 session.removeAttribute("sawonAdd");
    } 
 %>
-Main.jsp 불러옴
 <jsp:include page="Sawon/Mainpage1.jsp" flush="true"></jsp:include><br>
 </body>
 </html>

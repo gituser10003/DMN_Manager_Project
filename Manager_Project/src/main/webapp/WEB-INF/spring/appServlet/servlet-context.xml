@@ -14,8 +14,6 @@
 <mvc:view-controller path="/" view-name="/main"/>
 <mvc:view-controller path="/list" view-name="/list"/>
 
-
-
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>
 <mvc:resources location="/WEB-INF/views/css/" mapping="/css/**"/>
 <mvc:resources location="/WEB-INF/views/js/" mapping="/js/**"/>
@@ -34,11 +32,9 @@
 
 
 
-
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	<property name="prefix" value="/WEB-INF/views/"></property>
 	<property name="suffix" value=".jsp"></property>
 </bean>
-
 	
 </beans>

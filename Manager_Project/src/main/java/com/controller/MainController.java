@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.dto.SawonDTO;
+
 import com.service.SawonService;
 
 @Controller
@@ -15,14 +16,9 @@ public class MainController {
 @Autowired
 SawonService service;
 
-//@RequestMapping("/") 
-//public ModelAndView sawonList() {
-//	  List<SawonDTO> list= service.sawonList("top");
-//	  ModelAndView mav= new ModelAndView();
-//	  mav.addObject("sawonList", list);
-//	  //request.setAttribute("goodsList", list)와 동일
-//	  mav.setViewName("main");//main.jsp
-//	  return mav;	  
+//@RequestMapping("/")
+//public String main() {
+//		return "main";
 //}
 @RequestMapping("/list")
 public String list(Model m) {//list.jsp
