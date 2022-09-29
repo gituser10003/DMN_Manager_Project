@@ -15,6 +15,3 @@ SawonService service;
 //@RequestMapping("/")
 //public String main() {
 //		return "main";
-//}
-
-}
