@@ -23,7 +23,7 @@
  <li><a>직위 : <%= sawongrade %></a></li>
  </ul>
    <ul class="logo">
-    <li><a href="main2">DMN COFFEE</a></li>
+    <li><a href="/main">DMN COFFEE</a></li>
    </ul>
    </div>
    
@@ -34,7 +34,7 @@
    
         <div class="back">
 		<ul>
-		<li><a href="main"><img class="backimage" src="images/back.png"></a></li>
+		<li><a href="/main2"><img class="backimage" src="images/back.png"></a></li>
 		</ul>
 		</div>
 		

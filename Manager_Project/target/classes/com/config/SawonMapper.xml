@@ -3,10 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="SawonMapper">
-	<select id="list" resultType="SawonDTO">
-		select userid,passwd,username,phonenumber1,phonenumber2,phonenumber3,
-                   birthday1,birthday2,birthday3,email1,email2, sawongrade from sawon
-	</select>
+
 <insert id="sawonAdd" parameterType="SawonDTO">
 insert into sawon (userid,passwd,username,phonenumber1,phonenumber2,phonenumber3,
                    birthday1,birthday2,birthday3,email1,email2, sawongrade)
@@ -46,7 +43,7 @@ where userid=#{userid}
     where userid = #{userid}
    </delete>
 
-<update id="sawonUpdate" parameterType="SawonDTO">
+<update id="sawonupdate" parameterType="SawonDTO">
 update sawon
 set userid = #{userid},
 passwd = #{passwd},
@@ -93,5 +90,10 @@ from sawon
 	order by username desc
 	</select>
 	
+	<select id="list" resultType="SawonDTO" parameterType="string">
+	select userid, passwd, username, phonenumber1, phonenumber2, phonenumber3, birthday1, birthday2, birthday3,
+	email1,email2, sawongrade
+	from sawon
+	</select>
 	
 </mapper>

@@ -1,10 +1,10 @@
-<%-- <%@page import="com.dto.SawonPageDTO"%> --%>
+<%@page import="com.dto.SawonPageDTO"%>
 <%@page import="com.dto.SawonDTO"%>
 <%@page import="java.util.List"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +21,13 @@
 <link href="css/sawonlist.css?ver=1.1" rel="stylesheet" type="text/css">
 </head>
 <body>
+<%-- 	<%
+	SawonPageDTO pDTO = (SawonPageDTO) request.getAttribute("pDTO");
+	List<SawonDTO> list = pDTO.getList();
+	String order = (String)request.getAttribute("order");
+	String searchName = (String)request.getAttribute("searchName");
+	String searchValue = (String)request.getAttribute("searchValue");
+	%> --%>
 	<div class="intro">
 		<div class="header">
 
@@ -41,23 +48,26 @@
 
 <table class="admin_board_wrap">
 					<tbody class="admin_boardList">
+						<!-- <th class="admin_board_head" >아이디</th> -->
+						<!-- <th class="admin_board_head">비밀번호</th> -->
 						<th class="admin_board_head" >사원이름</th>
 						<th class="admin_board_head" >핸드폰번호</th>
 						<th class="admin_board_head" >생년월일</th>
 						<th class="admin_board_head" >이메일</th>
 						<th class="admin_board_head" >직위</th>
 					</tbody>
-				<c:forEach var="dto" items="${sawonlist }" varStatus="status">
 					<tbody>
-	
+								
+	<c:forEach var="dto" items="${list }" varStatus="status">
 		<tr class="admin_board_user_vowel" >
-			
-			<td class="admin_board_user" id="username" name="username"><a href="SawonRetrieve?userid=${dto.userid }">${dto.username}</a></td>
-			<td class="admin_board_user" id="phonenumber1" name="phonenumber1">${dto.phonenumber1+"-"dto.phonenumber2+"-"+dto.phonenumber1 }</td>
-			<td class="admin_board_user" id="birthday1" name="birthday1">${dto.birthday1+"/"+dto.birthday2+"/"+dto.birthday3}></td>
-			<td class="admin_board_user" id="email1" name="email1">${dto.email1+"@"+dto.email2}></td>
-			<td class="admin_board_user" id="sawongrade" name="sawongrade">${dto.sawongrade}</td>
+
+			<td class="admin_board_user" id="username" name="username"><a href="SawonRetrieve?userid=${dto.userid }">${dto.username }</a></td>
+			<td class="admin_board_user" id="phonenumber1" name="phonenumber1">${dto.phonenumber1 }-${dto.phonenumber2 }-${dto.phonenumber3 }</td>
+			<td class="admin_board_user" id="birthday1" name="birthday1">${dto.birthday1 }/${dto.birthday2 }/${dto.birthday3 }</td>
+			<td class="admin_board_user" id="email1" name="email1">${dto.email1 }@${dto.email2 }</td>
+			<td class="admin_board_user" id="sawongrade" name="sawongrade">${dto.sawongrade }</td>
 		</tr>
+		</c:forEach>
 			</tbody>
 			
 			<tr>
@@ -71,15 +81,12 @@
 				</form>
 			</td>
 		</tr>
-		<!-- 반복끝-->
-		</c:forEach>
-	
 				</table>
-	
+		
 				<s_paging> 
             <div id="paging" class="paging">
               <br>
-               <%--   <%
+     <%--             <%
 		        int curPage = pDTO.getCurPage();
 		        int perPage = pDTO.getPerPage();
 				int totalCount = pDTO.getTotalCount();
@@ -93,6 +100,11 @@
 		          	}
 		        }//end for
 		   %> --%>
+          <!--       <a href="#" class="prev" title="이전페이지">◀ PREV </a>
+                <s_paging_rep><a href="#" class="num">1</a></s_paging_rep>
+                <s_paging_rep><a href="#" class="num">2</a></s_paging_rep>
+                <s_paging_rep><a href="#" class="num">3</a></s_paging_rep>
+                <a href="#" class="prev" title="다음페이지">NEXT ▶</a> -->
               <br/>&nbsp;
             </div>
         </s_paging>

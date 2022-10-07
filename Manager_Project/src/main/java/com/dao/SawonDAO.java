@@ -1,5 +1,6 @@
 package com.dao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -21,6 +22,20 @@ public class SawonDAO {
 	public SawonDTO login(Map<String, String> map) {
 		SawonDTO dto = template.selectOne("SawonMapper.login",map);
 		return dto;
+	}
+
+	public SawonDTO SawonRetrieve(String userid) {
+		SawonDTO dto = template.selectOne("SawonMapper.SawonRetrieve", userid);
+		return dto;
+	}
+
+	public void sawonupdate(SawonDTO s) {
+		template.update("SawonMapper.sawonupdate", s);		
+	}
+
+	public List<SawonDTO> list(String userid) {
+		List<SawonDTO> list = template.selectList("SawonMapper.list", userid);
+		return list;
 	}
 	
 	

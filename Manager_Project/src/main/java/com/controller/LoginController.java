@@ -2,7 +2,6 @@ package com.controller;
 
 import java.util.Map;
 
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ public String login(@RequestParam Map<String, String> map, Model model, HttpSess
 		return "Page2"; //Page2.jsp
 	}else {
 		model.addAttribute("mesg", "아이디 또는 비번이 잘못되었습니다.");
-		return "Mainpage1"; //Mainpage1.jsp
+		return "main"; //Mainpage1.jsp
 	}
 	
 }

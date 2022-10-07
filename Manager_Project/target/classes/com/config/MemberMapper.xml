@@ -4,7 +4,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="MemberMapper">
 
-<select id="select" resultType="MemberDTO" parameterType="string">
+<select id="list" resultType="MemberDTO">
 select memno,phone1,phone2,phone3,mempoint
 from member
 </select>
@@ -61,7 +61,7 @@ where memno = #{memno}
      </where>
     </select>
 
-<insert id="memberAdd" parameterType="MemberDTO">
+<insert id="add" parameterType="MemberDTO">
 insert into member (memno,phone1,phone2,phone3,mempoint)
                   values((select nvl(max(memno),0)+1 from member),#{phone1},#{phone2},#{phone3},#{mempoint})
 </insert>

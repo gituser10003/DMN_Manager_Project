@@ -60,7 +60,7 @@ $("#userid").on("keyup",function(event){
 <div class="intro">
  
    <ul class="logo">
-    <li><a href="Mainpage1.jsp">DMN COFFEE</a></li>
+    <li><a href="main5">DMN COFFEE</a></li>
    </ul>
    
    <ul class="jemog">
@@ -300,7 +300,7 @@ $("#userid").on("keyup",function(event){
     <div class="button">
   
    <div>
-   <input class="cancell" onclick="location.href='main.jsp'" value="취소">
+   <input class="cancell" onclick="location.href='main3'" value="취소">
    </div>
    
    <div>

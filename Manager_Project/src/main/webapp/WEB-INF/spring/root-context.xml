@@ -28,11 +28,13 @@
 		<property name="mapperLocations">
 			<list>
 				<value>classpath:com/config/SawonMapper.xml</value>
+				<value>classpath:com/config/MemberMapper.xml</value>
 			</list>		
 		</property>
 		<property name="typeAliases">
 			<list>
 				<value>com.dto.SawonDTO</value>
+				<value>com.dto.MemberDTO</value>
 			</list>		
 		</property>
 	</bean>	

@@ -1,5 +1,6 @@
 package com.service;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,21 @@ public void sawonAdd(SawonDTO s) {
 public SawonDTO login(Map<String, String> map) {
 	SawonDTO dto = dao.login(map);
 	return dto;
+}
+
+
+public SawonDTO SawonRetrieve(String userid) {
+	SawonDTO dto = dao.SawonRetrieve(userid);
+	return dto;
+}
+
+public void sawonupdate(SawonDTO s) {
+	dao.sawonupdate(s);
+}
+
+public List<SawonDTO> list(String userid) {
+	List<SawonDTO> list = dao.list(userid);
+	return list;
 }
 
 

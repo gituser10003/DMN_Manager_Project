@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link href="css/Mainpage1.css?ver=1" rel="stylesheet" type="text/css">
+<link href="css/Mainpage1.css?ver=1.1" rel="stylesheet" type="text/css">
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -30,7 +30,7 @@ $(document).ready(function () {
 <div class="back-img"></div>
  
    <ul class="logo">
-    <li><a href="Mainpage1.jsp">DMN COFFEE</a></li>
+    <li><a href="main4">DMN COFFEE</a></li>
    </ul>
    
    <ul class="jemog">
@@ -50,6 +50,6 @@ $(document).ready(function () {
    </div>
    </form>
    
-   <a href="Page3.jsp" class="signup">회원가입</a>
+   <a style="color:white" href="Page3" class="signup">회원가입</a>
 </div>
 </body>

@@ -11,20 +11,25 @@
 
 <mvc:view-controller path="/" view-name="main"/> <!-- main.jsp불러오는거 -->
 <mvc:view-controller path="/Page3" view-name="Page3"/><!-- Page3.jsp불러오는거 -->
+<mvc:view-controller path="/memberlist" view-name="memberlist"/>
+<mvc:view-controller path="/memberAdd" view-name="memberAdd"/>
+<mvc:view-controller path="/memberedit" view-name="memberedit"/>
+<mvc:view-controller path="/sawonlist" view-name="sawonlist"/><!-- sawonlist.jsp불러오는거 -->
+<mvc:view-controller path="/SawonRetrieve" view-name="SawonRetrieve"/><!-- SawonRetrieve.jsp불러오는거 -->
 
 
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>
 <mvc:resources location="/WEB-INF/views/css/" mapping="/css/**"/>
 <mvc:resources location="/WEB-INF/views/js/" mapping="/js/**"/>
 
-<!-- <mvc:interceptors>
+<mvc:interceptors>
 	<mvc:interceptor>
 		<mvc:mapping path="/loginCheck/**"/>
 		<ref bean="loginCheckInterceptor"/>
 	</mvc:interceptor>
 </mvc:interceptors>
 <bean id="loginCheckInterceptor" class="com.interceptor.LoginCheckInterceptor"></bean>
-	<context:component-scan base-package="com.*"></context:component-scan> -->
+	<context:component-scan base-package="com.*"></context:component-scan>
 	
 <context:component-scan base-package="com.*"></context:component-scan>
 
