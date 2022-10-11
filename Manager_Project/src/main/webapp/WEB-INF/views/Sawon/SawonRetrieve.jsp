@@ -45,30 +45,34 @@ $("#selectemail").on("change", function() {
 	$("#email2").val(email);
 });
 
-$("#userid").on("keyup",function(event){	
-	 $.ajax({
-			type : "GET",
-			url : "SawonIdCheckServlet",
-			dataType : "text",//응답 데이터 타입
-			data : {  //서버에 넘겨줄 데이터 
-				userid : $("#userid").val()
-			},
-			success : function(responseData, status, xhr) {
-				console.log(responseData);
-			   $("#result").text(responseData);
-			},
-			error : function(xhr, status, error) {
-				console.log("error");
-			}
-		});
-	 
-});
-
-//삭제버튼
-$(".del").on("click",function(){
+ //삭제버튼
+/*  $(".del").on("click",function(){
 	var userid= $(this).attr("data-id");
-	location.href="SawonDelServlet?userid="+userid;
-}); 
+	location.href="loginCheck/sawonDelete?userid="+userid;
+});   */
+
+//삭제버튼 이벤트처리
+  $(".del").on("click", function () {
+	console.log("del 클릭 ");
+	var userid= $(this).attr("data-id");
+	var xxx= $(this);
+	$.ajax({
+		url: "loginCheck/sawonDelete",
+		type:"get",
+		dataType: "text",
+		data: {
+			userid: userid
+		},
+		success: function(data, status, xhr) {
+			console.log("success");
+			//dom삭제 
+			xxx.parents().filter("tr").remove();
+		},
+		error: function(xhr, status, error) {
+			console.log(error);
+		}			
+	});//end ajax
+});//end event  
 
 })//end document
 </script>

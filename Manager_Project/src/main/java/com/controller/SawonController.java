@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dto.SawonDTO;
@@ -19,6 +20,14 @@ import com.service.SawonService;
 public class SawonController {
 	@Autowired
 	SawonService service;
+	
+	@RequestMapping(value = "/loginCheck/sawonDelete")
+	@ResponseBody
+	public void sawonDelete(@RequestParam("userid") String userid) {
+		System.out.println(userid);
+		service.sawonDelete(userid);
+	}
+	
 
 	@RequestMapping(value = "/sawonAdd")
 	public String sawonAdd(SawonDTO s, Model model) {

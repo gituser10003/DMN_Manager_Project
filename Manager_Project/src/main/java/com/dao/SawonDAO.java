@@ -37,6 +37,12 @@ public class SawonDAO {
 		List<SawonDTO> list = template.selectList("SawonMapper.list", userid);
 		return list;
 	}
+
+	public void sawonDelete(String userid) {
+		int n= template.delete("SawonMapper.sawonDelete", userid);
+	}
+
+
 	
 	
 	
