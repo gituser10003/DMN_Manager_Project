@@ -22,7 +22,7 @@ $(document).ready(function () {
 				}); */
 })//end document
 </script>
-<form action="memberadd" method="get">
+<form action="loginCheck/memberadd" method="get">
 <div class="intro">
  
    <ul class="logo">

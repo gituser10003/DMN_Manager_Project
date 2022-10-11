@@ -30,5 +30,9 @@ public class MemberService {
 	public void memberUpdate(MemberDTO m) {
 		dao.memberUpdate(m);		
 	}
+
+	public void memberDelete(MemberDTO dto) {
+		dao.memberDelete(dto);
+	}
 	
 }

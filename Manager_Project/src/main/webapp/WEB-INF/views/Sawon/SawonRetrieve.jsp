@@ -46,39 +46,20 @@ $("#selectemail").on("change", function() {
 });
 
  //삭제버튼
-/*  $(".del").on("click",function(){
-	var userid= $(this).attr("data-id");
-	location.href="loginCheck/sawonDelete?userid="+userid;
-});   */
+ var SawonRetrieve=$("form[name='sawon']");
+ 
+$(".del").on("click",function(){
+	SawonRetrieve.attr("action","./loginCheck/sawonDelete");
+	SawonRetrieve.attr("method","post");
+	SawonRetrieve.submit();
+}); 
 
-//삭제버튼 이벤트처리
-  $(".del").on("click", function () {
-	console.log("del 클릭 ");
-	var userid= $(this).attr("data-id");
-	var xxx= $(this);
-	$.ajax({
-		url: "loginCheck/sawonDelete",
-		type:"get",
-		dataType: "text",
-		data: {
-			userid: userid
-		},
-		success: function(data, status, xhr) {
-			console.log("success");
-			//dom삭제 
-			xxx.parents().filter("tr").remove();
-		},
-		error: function(xhr, status, error) {
-			console.log(error);
-		}			
-	});//end ajax
-});//end event  
 
 })//end document
 </script>
 
 <div class="intro">
- <form action="loginCheck/sawonupdate" method="get">
+ <form action="loginCheck/sawonupdate" method="post" name="sawon">
    <ul class="logo">
     <li><a href="Mainpage1.jsp">DMN COFFEE</a></li>
    </ul>
@@ -322,12 +303,12 @@ $("#selectemail").on("change", function() {
    <input onclick="return confirm('정말로 수정하시겠습니까?')" class="check" type="submit" value="확인">
    </div>
    </div>
-   </form>
+   
    
      <div>
      <input onclick="return confirm('정말로 삭제하시겠습니까?')" type="button" class="del"  value="삭제" id="xx${SawonRetrieve.userid}" data-id="${SawonRetrieve.userid}" />
      </div> 
-
+</form>
 
 </div>
 

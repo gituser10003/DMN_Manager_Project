@@ -38,9 +38,11 @@ public List<SawonDTO> list(String userid) {
 	return list;
 }
 
-public void sawonDelete(String userid) {
-	dao.sawonDelete(userid);
+
+public void sawonDelete(SawonDTO dto) {
+	dao.sawonDelete(dto);
 }
+
 
 
 

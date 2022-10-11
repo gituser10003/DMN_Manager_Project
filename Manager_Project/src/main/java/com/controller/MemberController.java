@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dto.MemberDTO;
@@ -32,7 +34,7 @@ public class MemberController {
 	public String memberadd(MemberDTO dto) {//list.jsp
 		System.out.println(dto+"add() 호출=====");
 		service.memberadd(dto);
-		return "redirect:../memberlist";
+		return "redirect:../loginCheck/memberlist";
 	}
 	
 	@RequestMapping("/memberedit")//memberedit.jsp
@@ -44,6 +46,13 @@ public class MemberController {
 	@RequestMapping(value = "/loginCheck/memberUpdate")
 	public String memberUpdate(MemberDTO m) {
 		service.memberUpdate(m);
+		return "redirect:../loginCheck/memberlist";
+	}
+	
+	@RequestMapping(value = "/loginCheck/memberDelete", method = RequestMethod.POST)
+	public String memberDelete(MemberDTO dto) {
+		System.out.println(dto);
+		service.memberDelete(dto);
 		return "redirect:../loginCheck/memberlist";
 	}
 	

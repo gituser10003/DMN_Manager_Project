@@ -38,8 +38,10 @@ public class SawonDAO {
 		return list;
 	}
 
-	public void sawonDelete(String userid) {
-		int n= template.delete("SawonMapper.sawonDelete", userid);
+
+	public void sawonDelete(SawonDTO dto) {
+		int n= template.delete("SawonMapper.sawonDelete", dto);
+		
 	}
 
 
