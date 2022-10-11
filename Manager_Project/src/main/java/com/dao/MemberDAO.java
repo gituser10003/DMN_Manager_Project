@@ -32,5 +32,9 @@ public class MemberDAO {
 		List<MemberDTO> list = session.selectList("MemberMapper.list", userid);
 		return list;
 	}
+
+	public void memberDelete(MemberDTO dto) {
+		int n= session.delete("MemberMapper.memberDelete", dto);
+		}
 	
 }

@@ -34,13 +34,7 @@
 					회원 리스트
 					<div class="title_menus"></div>
 				</div>
-			<%-- 	<%
-					MemberPageDTO mDTO = (MemberPageDTO) request.getAttribute("mDTO");
-					List<MemberDTO> list = mDTO.getList();
-					String order = (String) request.getAttribute("order");
-					String searchName = (String) request.getAttribute("searchName");
-					String searchValue = (String) request.getAttribute("searchValue");
-				%> --%>
+	
 				<table class="admin_board_wrap">
 				
 					<tbody class="admin_boardList">
@@ -51,15 +45,7 @@
 						<th class="admin_board_head">포인트</th>
 					</tbody>
 					<tbody>
-				<%-- 		<%
-							for (int i = 0; i < list.size(); i++) {
-								MemberDTO dto = list.get(i);
-								int memno = dto.getMemno();
-								String phone1 = dto.getPhone1();
-								String phone2 = dto.getPhone2();
-								String phone3 = dto.getPhone3();
-								int mempoint = dto.getMempoint();
-						%> --%>
+		
 <c:forEach var="dto" items="${memberlist }" varStatus="status">
 						<tr class="admin_board_user_vowel">
 
@@ -88,7 +74,14 @@
 
 					<div id="paging" class="paging">
 						<br>
-				<%-- 		<%
+				<%-- 					<%
+					MemberPageDTO mDTO = (MemberPageDTO) request.getAttribute("mDTO");
+					List<MemberDTO> list = mDTO.getList();
+					String order = (String) request.getAttribute("order");
+					String searchName = (String) request.getAttribute("searchName");
+					String searchValue = (String) request.getAttribute("searchValue");
+				%>  --%>
+					<%-- 	<%
 							int curPage = mDTO.getCurPage();
 							int perPage = mDTO.getPerPage();
 							int totalCount = mDTO.getTotalCount();
@@ -103,7 +96,7 @@
 											+ searchValue + "'>" + i + "</a>&nbsp;");
 								}
 							} //end for
-						%> --%>
+						%>  --%>
 
 						<br />&nbsp;
 					</div>

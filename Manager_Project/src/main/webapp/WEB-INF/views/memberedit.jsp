@@ -30,24 +30,21 @@ $(document).ready(function () {
 });//end userid */
 
 //삭제버튼
+var memberRetrieve=$("form[name='member']");
+
 $(".del").on("click",function(){
-	var memno= $(this).attr("data-id");
-	location.href="MemberDelServlet?memno="+memno;
-});
+	memberRetrieve.attr("action","./loginCheck/memberDelete");
+	memberRetrieve.attr("method","post");
+	memberRetrieve.submit();
+}); 
+
 
 })//end document
 </script>
-<%-- <%
-MemberDTO dto = (MemberDTO)request.getAttribute("dto");
-int memno = dto.getMemno();
-String phone1 = dto.getPhone1();
-String phone2 = dto.getPhone2();
-String phone3 = dto.getPhone3();
-int mempoint = dto.getMempoint();
-%> --%>
+
 
 <div class="intro">
- <form action="loginCheck/memberUpdate" method="post">
+ <form action="loginCheck/memberUpdate" method="post" name="member">
    <ul class="logo">
     <li><a href="Mainpage1.jsp">DMN COFFEE</a></li>
    </ul>
@@ -94,9 +91,15 @@ int mempoint = dto.getMempoint();
    
    </div>
    
-    <div>
+<%--     <div>
      <input onclick="return confirm('정말로 삭제하시겠습니까?')" type="button" class="del"  value="삭제" id="xx${memberRetrieve.memno }" data-id="${memberRetrieve.memno }" />
+     </div>  --%>
+    <div>
+     <input onclick="return confirm('정말로 삭제하시겠습니까?')" type="button" class="del"  value="삭제" id="xx${memberRetrieve.memno }" data-id="${memberRetrieve.memno }"/>
      </div> 
+  <%--    <div>
+     <a class="del" href="/loginCheck/memberDelete?memno${memberRetrieve.memno }" role="button" onclick="return confirm('정말로 삭제하시겠습니까?')">삭제</a>
+     </div> --%>
      
      </div>
      

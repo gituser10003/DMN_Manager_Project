@@ -26,7 +26,7 @@ mempoint = #{mempoint}
 where memno = #{memno}
 </update>
 
-<delete id="memberDel" parameterType="String">
+<delete id="memberDelete" parameterType="MemberDTO">
 delete 
 from member
 where memno = #{memno}
