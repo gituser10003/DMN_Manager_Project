@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.dao.SawonDAO;
 import com.dto.SawonDTO;
+import com.dto.SawonPageDTO;
 
 @Service
 public class SawonService {
@@ -37,6 +38,18 @@ public List<SawonDTO> list(String userid) {
 	List<SawonDTO> list = dao.list(userid);
 	return list;
 }
+
+
+public void sawonDelete(SawonDTO dto) {
+	dao.sawonDelete(dto);
+}
+
+//public List<SawonDTO> sawonlist(SawonPageDTO spdto) {
+//	List<SawonDTO> sawonlist = dao.sawonlist(spdto);
+//	return sawonlist;
+//}
+
+
 
 
 
