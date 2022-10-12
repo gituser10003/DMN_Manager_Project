@@ -11,6 +11,9 @@ public class SawonPageDTO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	public SawonPageDTO(SawonPageDTO spdto, int total) {
+		// TODO Auto-generated constructor stub
+	}
 	public List<SawonDTO> getList() {
 		return list;
 	}

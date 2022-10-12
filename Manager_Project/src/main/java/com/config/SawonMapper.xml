@@ -37,7 +37,7 @@ from sawon
 where userid=#{userid}
 </select>
 
- <delete id="SawonDel" parameterType="String">
+ <delete id="sawonDelete" parameterType="String">
     delete
     from sawon
     where userid = #{userid}

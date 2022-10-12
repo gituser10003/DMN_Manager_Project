@@ -44,7 +44,7 @@ $(document).ready(function () {
 						<!-- <th class="admin_board_head">비밀번호</th> -->
 						<th class="admin_board_head">회원번호</th>
 						<th class="admin_board_head">핸드폰번호</th>
-						<th class="admin_board_head">포인트</th>
+						<th class="admin_board_head">스탬프</th>
 					</tbody>
 					<tbody>
 		

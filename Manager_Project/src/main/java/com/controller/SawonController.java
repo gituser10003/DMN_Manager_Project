@@ -9,17 +9,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dto.SawonDTO;
+import com.dto.SawonPageDTO;
 import com.service.SawonService;
 
 @Controller
 public class SawonController {
 	@Autowired
 	SawonService service;
-
+	
 	@RequestMapping(value = "/sawonAdd")
 	public String sawonAdd(SawonDTO s, Model model) {
 		service.sawonAdd(s);
@@ -50,6 +53,19 @@ public class SawonController {
 		return "redirect:../loginCheck/sawonlist";
 	}
 
+	@RequestMapping(value = "/loginCheck/sawonDelete", method = RequestMethod.POST)
+	public String sawonDelete(SawonDTO dto) {
+		System.out.println(dto);
+		service.sawonDelete(dto);
+		return "redirect:../loginCheck/sawonlist";
+	}
 
-
+	   /* 게시판 목록 페이지 접속(페이징 적용) */
+//	  @RequestMapping(value="/loginCheck/sawonlist", method = RequestMethod.GET)
+//	  @ResponseBody
+//	  public List<SawonDTO> sawonlist(@ModelAttribute SawonPageDTO spdto, P) {
+//	       List<SawonDTO> list = service.sawonlist(spdto);
+//	       return list;
+//	        
+//	    }
 }

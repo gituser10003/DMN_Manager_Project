@@ -72,7 +72,7 @@
 			
 			<tr>
 			<td colspan="5">
-				<form action="SawonListServlet">
+				<form action="list">
 					<select name="searchName">
 						<option value="sawongrade">직급</option>
 						<option value="username">이름</option>
@@ -106,7 +106,7 @@
                 <s_paging_rep><a href="#" class="num">3</a></s_paging_rep>
                 <a href="#" class="prev" title="다음페이지">NEXT ▶</a> -->
               <br/>&nbsp;
-            </div>
+            </div><!-- end paging -->
         </s_paging>
 			</div><!-- end main1 -->
 		</div><!-- end header -->
