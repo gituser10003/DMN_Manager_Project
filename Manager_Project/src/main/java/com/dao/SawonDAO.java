@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.dto.SawonDTO;
+import com.dto.SawonPageDTO;
 
 @Repository
 public class SawonDAO {
@@ -43,6 +44,10 @@ public class SawonDAO {
 		int n= template.delete("SawonMapper.sawonDelete", dto);
 		
 	}
+
+//	public List<SawonDTO> sawonlist(SawonPageDTO spdto) {
+//		return template.selectList("SawonMapper.sawonlist",spdto);
+//	}
 
 
 	
