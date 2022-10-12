@@ -9,10 +9,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-	
+
+$(document).ready(function () {
+
+}
 </script>
 <link href="css/memberlist.css?ver=1" rel="stylesheet" type="text/css">
 </head>
@@ -60,12 +62,13 @@
 					</tbody>
 					<tr>
 						<td colspan="5">
-							<form action="">
+							<form action="loginCheck/PageList">
 								<select name="searchName">
 									<option value="memno">회원번호</option>
 									<option value="memphone3">번호</option>
-								</select> <input type="text" name="searchValue"> <input
-									type="submit" value="검색">
+								</select> 
+								<input type="text" name="searchValue"> 
+								<input type="submit" value="검색">
 							</form>
 						</td>
 					</tr>

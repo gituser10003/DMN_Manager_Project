@@ -55,5 +55,14 @@ public class MemberController {
 		service.memberDelete(dto);
 		return "redirect:../loginCheck/memberlist";
 	}
+//	@RequestMapping(value ="/loginCheck/PageList")
+//	public String PageList(RedirectAttributes attr, HttpSession session) {
+//		SawonDTO dto = (SawonDTO)session.getAttribute("login");
+//		String userid = dto.getUserid();
+//		List<MemberDTO> memberlist = service.list(userid);
+//		attr.addFlashAttribute("memberlist", memberlist);
+//		attr.addFlashAttribute("memberlist", memberlist);
+//		return "redirect:../memberlist";
+//	}
 	
 }

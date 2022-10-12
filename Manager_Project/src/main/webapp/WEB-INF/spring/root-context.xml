@@ -29,12 +29,14 @@
 			<list>
 				<value>classpath:com/config/SawonMapper.xml</value>
 				<value>classpath:com/config/MemberMapper.xml</value>
+				<value>classpath:com/config/ProductMapper.xml</value>
 			</list>		
 		</property>
 		<property name="typeAliases">
 			<list>
 				<value>com.dto.SawonDTO</value>
 				<value>com.dto.MemberDTO</value>
+				<value>com.dto.ProductDTO</value>
 			</list>		
 		</property>
 	</bean>	
