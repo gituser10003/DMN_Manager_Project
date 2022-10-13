@@ -17,6 +17,8 @@
 <mvc:view-controller path="/sawonlist" view-name="sawonlist"/><!-- sawonlist.jsp불러오는거 -->
 <mvc:view-controller path="/SawonRetrieve" view-name="SawonRetrieve"/><!-- SawonRetrieve.jsp불러오는거 -->
 <mvc:view-controller path="/ProductList" view-name="ProductList"/><!-- ProductList.jsp불러오는거 -->
+<mvc:view-controller path="/Productedit" view-name="Productedit"/><!-- Productedit.jsp불러오는거 -->
+<mvc:view-controller path="/ProductAdd" view-name="ProductAdd"/><!-- ProductAdd.jsp불러오는거 -->
 
 
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>

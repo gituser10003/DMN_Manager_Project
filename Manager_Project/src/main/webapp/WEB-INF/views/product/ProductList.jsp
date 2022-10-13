@@ -1,4 +1,6 @@
 <%@page import="java.util.List"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,13 +16,7 @@
 
 </head>
 <body>
-<%-- 	<%
-	ProductPageDTO pDTO = (ProductPageDTO) request.getAttribute("pDTO");
-	List<ProductDTO> list = pDTO.getList();
-	String order = (String)request.getAttribute("order");
-	String searchName = (String)request.getAttribute("searchName");
-	String searchValue = (String)request.getAttribute("searchValue");
-	%> --%>
+
 	<div class="intro">
 		<div class="header">
 
@@ -57,26 +53,14 @@
 						<th class="admin_board_head" >물품분류</th>
 					</tbody>
 					<tbody>
-<%-- 		<%
-			for (int i = 0; i < list.size(); i++) {
-				ProductDTO dto = list.get(i);
-				int pdno=dto.getPdno();
-				String pdnm=dto.getPdnm();
-				int pdprice=dto.getPdprice();
-				int ctno=dto.getCtno();
-			
-		%> --%>
-	
-<%-- 		<tr class="admin_board_user_vowel" >
-			
-			<td class="admin_board_user" id="pdno" name="pdno"><a href="ProductRetrieveServlet?pdno=<%=pdno%>"><%=pdno%></a></td>
-			<td class="admin_board_user" id="pdnm" name="pdnm"><%=pdnm%></td>
-			<td class="admin_board_user" id="pdprice" name="pdprice"><%=pdprice%></td>
-			<td class="admin_board_user" id="ctno" name="ctno"><%=ctno%></td>
-		</tr> --%>
-	<%-- 				<%
-			}
-		%> --%>
+	<c:forEach var="dto" items="${ProductList }" varStatus="status">
+		<tr class="admin_board_user_vowel" >
+			<td class="admin_board_user" id="pdno" name="pdno"><a href="Productedit?pdno=${dto.pdno }">${dto.pdno }</a></td>
+			<td class="admin_board_user" id="pdnm" name="pdnm">${dto.pdnm }</td>
+			<td class="admin_board_user" id="pdprice" name="pdprice">${dto.pdprice }</td>
+			<td class="admin_board_user" id="ctno" name="ctno">${dto.ctno }</td>
+		</tr>
+		</c:forEach>
 			</tbody>
 			
 			<tr>
@@ -114,7 +98,7 @@
             </div><!-- end paging -->
             
             <div class="ssign">
-				<a href="ProductAdd.jsp" class="signup">상품등록</a>
+				<a href="ProductAdd" class="signup">상품등록</a>
 			</div>
 			
         </div><!-- end pagesign -->
