@@ -1,5 +1,8 @@
 package com.dto;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("CategoryDTO")
 public class CategoryDTO {
 	
 	int ctno;

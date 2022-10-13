@@ -11,24 +11,6 @@
 
 $(document).ready(function () {
 
-/* $("#userid").on("keyup",function(event){	
-	 $.ajax({
-			type : "GET",
-			url : "SawonIdCheckServlet",
-			dataType : "text",//응답 데이터 타입
-			data : {  //서버에 넘겨줄 데이터 
-				userid : $("#userid").val()
-			},
-			success : function(responseData, status, xhr) {
-				console.log(responseData);
-			   $("#result").text(responseData);
-			},
-			error : function(xhr, status, error) {
-				console.log("error");
-			}
-		});
-});//end userid */
-
 //삭제버튼
 var memberRetrieve=$("form[name='member']");
 
