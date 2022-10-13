@@ -4,6 +4,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="OptMapper">
 
+<select id="OptList" resultType="OptDTO">
+	select optno,optnm,optprice,ctno
+		from opt
+</select>
+
 	<select id="totalCount" resultType="int" parameterType="hashmap">
 		select count(*)
 		from opt
@@ -33,7 +38,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 		order by optno asc
 	</select>
-	<select id="OptRetrieve" parameterType="string" resultType="OptDTO">
+	<select id="optedit" parameterType="string" resultType="OptDTO">
 		select optno,optnm,optprice,ctno
 		from opt
 		where optno=#{optno}
@@ -44,7 +49,7 @@ insert into opt (optno,optnm,optprice,ctno)
             values((select nvl(max(optno),0)+1 from opt),#{optnm},#{optprice},#{ctno})
 </insert>
 
-<update id="OptUpdate"  parameterType="hashmap">
+<update id="optUpdate"  parameterType="hashmap">
 update opt
 set 
 optno = #{optno},
@@ -54,7 +59,7 @@ ctno = #{ctno}
 where optno = #{optno}
 </update>
 
-<delete id="OptDel" parameterType="String">
+<delete id="optDelete" parameterType="OptDTO">
 delete 
 from opt
 where optno = #{optno}
