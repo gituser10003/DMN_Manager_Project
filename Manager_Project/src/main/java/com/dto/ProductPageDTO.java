@@ -3,20 +3,27 @@ package com.dto;
 import java.util.List;
 
 import org.apache.ibatis.type.Alias;
-@Alias("MemberPageDTO")
-public class MemberPageDTO {
-	private List<MemberDTO> list;
+@Alias("ProductPageDTO")
+public class ProductPageDTO {
+	private List<ProductDTO> list;   
 	private int curPage;    
 	private int perPage=10;  
 	private int totalCount;
-	public MemberPageDTO() {
+	public ProductPageDTO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public List<MemberDTO> getList() {
+	public ProductPageDTO(List<ProductDTO> list, int curPage, int perPage, int totalCount) {
+		super();
+		this.list = list;
+		this.curPage = curPage;
+		this.perPage = perPage;
+		this.totalCount = totalCount;
+	}
+	public List<ProductDTO> getList() {
 		return list;
 	}
-	public void setList(List<MemberDTO> list) {
+	public void setList(List<ProductDTO> list) {
 		this.list = list;
 	}
 	public int getCurPage() {
@@ -37,7 +44,10 @@ public class MemberPageDTO {
 	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
 	}
-	
-		
+	@Override
+	public String toString() {
+		return "ProductPageDTO [list=" + list + ", curPage=" + curPage + ", perPage=" + perPage + ", totalCount="
+				+ totalCount + "]";
+	}
 	
 }

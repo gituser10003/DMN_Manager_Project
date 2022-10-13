@@ -1,5 +1,8 @@
 package com.dto;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("ProductDTO")
 public class ProductDTO {
     private int pdno;
     private String pdnm;
