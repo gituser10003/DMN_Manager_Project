@@ -73,15 +73,10 @@ $(".del").on("click",function(){
    
    </div>
    
-<%--     <div>
-     <input onclick="return confirm('정말로 삭제하시겠습니까?')" type="button" class="del"  value="삭제" id="xx${memberRetrieve.memno }" data-id="${memberRetrieve.memno }" />
-     </div>  --%>
     <div>
      <input onclick="return confirm('정말로 삭제하시겠습니까?')" type="button" class="del"  value="삭제" id="xx${memberRetrieve.memno }" data-id="${memberRetrieve.memno }"/>
      </div> 
-  <%--    <div>
-     <a class="del" href="/loginCheck/memberDelete?memno${memberRetrieve.memno }" role="button" onclick="return confirm('정말로 삭제하시겠습니까?')">삭제</a>
-     </div> --%>
+
      
      </div>
      

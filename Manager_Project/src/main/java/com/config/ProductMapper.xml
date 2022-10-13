@@ -3,6 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ProductMapper">
+<select id="list" resultType="ProductDTO">
+	select pdno,pdnm,pdprice,ctno
+from product
+</select>
 	  <select id="totalCount" resultType="int" parameterType="hashmap">
       select count(*)
       from product
@@ -53,7 +57,7 @@ insert into product (pdno,pdnm,pdprice,ctno)
             values((select nvl(max(pdno),0)+1 from product),#{pdnm},#{pdprice},#{ctno})
 </insert>
 
-<delete id="ProductDel" parameterType="String">
+<delete id="ProductDel" parameterType="ProductDTO">
 delete 
 from product
 where pdno = #{pdno}
