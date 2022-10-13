@@ -30,6 +30,8 @@
 				<value>classpath:com/config/SawonMapper.xml</value>
 				<value>classpath:com/config/MemberMapper.xml</value>
 				<value>classpath:com/config/ProductMapper.xml</value>
+				<value>classpath:com/config/CategoryMapper.xml</value>
+				<value>classpath:com/config/OptMapper.xml</value>
 			</list>		
 		</property>
 		<property name="typeAliases">
@@ -37,6 +39,8 @@
 				<value>com.dto.SawonDTO</value>
 				<value>com.dto.MemberDTO</value>
 				<value>com.dto.ProductDTO</value>
+				<value>com.dto.CategoryDTO</value>
+				<value>com.dto.OptDTO</value>
 			</list>		
 		</property>
 	</bean>	
