@@ -36,7 +36,7 @@
 			    </div>
 			    
 			   	<div class="detail">
-					<div><a href="ProductListServlet?" class="category">상품</a>&nbsp;</div>
+					<div><a href="loginCheck/ProductList" class="category">상품</a>&nbsp;</div>
 					<div><a href="loginCheck/categorylist" class="option">카테고리</a>&nbsp;</div>
 					<div><a href="loginCheck/OptList" class="opt">옵션</a></div>
 				</div> 
