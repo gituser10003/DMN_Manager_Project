@@ -19,6 +19,12 @@
 <mvc:view-controller path="/ProductList" view-name="ProductList"/><!-- ProductList.jsp불러오는거 -->
 <mvc:view-controller path="/Productedit" view-name="Productedit"/><!-- Productedit.jsp불러오는거 -->
 <mvc:view-controller path="/ProductAdd" view-name="ProductAdd"/><!-- ProductAdd.jsp불러오는거 -->
+<mvc:view-controller path="/categorylist" view-name="categorylist"/><!-- ProductList.jsp불러오는거 -->
+<mvc:view-controller path="/categoryadd" view-name="categoryadd"/>
+<mvc:view-controller path="/categoryedit" view-name="categoryedit"/>
+<mvc:view-controller path="/OptList" view-name="OptList"/><!-- OptList.jsp불러오는거 -->
+<mvc:view-controller path="/OptAdd" view-name="OptAdd"/><!-- OptAdd.jsp불러오는거 -->
+<mvc:view-controller path="/optedit" view-name="optedit"/><!-- optedit.jsp불러오는거 -->
 
 
 <mvc:resources location="/WEB-INF/views/images/" mapping="/images/**"/>

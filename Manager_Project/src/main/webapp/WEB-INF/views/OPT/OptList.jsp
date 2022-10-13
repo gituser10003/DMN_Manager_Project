@@ -1,3 +1,4 @@
+<%@page import="com.dto.OptDTO"%>
 <%@page import="java.util.List"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
@@ -12,7 +13,7 @@
 <script type="text/javascript">
 
 </script>
-<link href="css/ProductList.css?ver=1.1" rel="stylesheet" type="text/css">
+<link href="css/OptList.css?ver=1.2" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -31,32 +32,32 @@
 				</div>
 				<div class="ttp">
 				
-				<div class="modify_title">
-					<a>상품 리스트</a>
+					<div class="modify_title">
+					<a>옵션 리스트</a>
 			    </div>
 			    
-			   	<div class="detail">
+			    <div class="detail">
 					<div><a href="ProductListServlet?" class="category">상품</a>&nbsp;</div>
 					<div><a href="loginCheck/categorylist" class="option">카테고리</a>&nbsp;</div>
 					<div><a href="loginCheck/OptList" class="opt">옵션</a></div>
-				</div> 
+				</div>
+			    
 				</div>
 
 <table class="admin_board_wrap">
 					<tbody class="admin_boardList">
-						<!-- <th class="admin_board_head" >아이디</th> -->
-						<!-- <th class="admin_board_head">비밀번호</th> -->
-						<th class="admin_board_head" >상품번호</th>
-						<th class="admin_board_head" >상품명</th>
-						<th class="admin_board_head" >가격</th>
-						<th class="admin_board_head" >물품분류</th>
+						<th class="admin_board_head" >옵션번호</th>
+						<th class="admin_board_head" >옵션명</th>
+						<th class="admin_board_head" >추가금액</th>
+						<th class="admin_board_head" >분류번호</th>
 					</tbody>
 					<tbody>
-	<c:forEach var="dto" items="${ProductList }" varStatus="status">
+	<c:forEach var="dto" items="${OptList }" varStatus="status">
 		<tr class="admin_board_user_vowel" >
-			<td class="admin_board_user" id="pdno" name="pdno"><a href="Productedit?pdno=${dto.pdno }">${dto.pdno }</a></td>
-			<td class="admin_board_user" id="pdnm" name="pdnm">${dto.pdnm }</td>
-			<td class="admin_board_user" id="pdprice" name="pdprice">${dto.pdprice }</td>
+			
+			<td class="admin_board_user" id="optno" name="optno"><a href="optedit?optno=${dto.optno }">${dto.optno }</a></td>
+			<td class="admin_board_user" id="optnm" name="optnm">${dto.optnm }</td>
+			<td class="admin_board_user" id="optprice" name="optprice">${dto.optprice }</td>
 			<td class="admin_board_user" id="ctno" name="ctno">${dto.ctno }</td>
 		</tr>
 		</c:forEach>
@@ -64,9 +65,9 @@
 			
 			<tr>
 			<td colspan="5">
-				<form action="ProductListServlet">
+				<form action="OptListServlet">
 					<select name="searchName">
-						<option value="pdnm">상품명</option>
+						<option value="pdnm">옵션명</option>
 						<option value="ctno">상품분류</option>
 					</select> <input type="text" name="searchValue"> <input
 						type="submit" value="검색">
@@ -74,18 +75,17 @@
 			</td>
 		</tr>
 				</table>
-		
-			<div class="pagesign">
-			
+		<div class="pagesign">
+				
             <div id="paging" class="paging">
               <br>
               <br/>&nbsp;
             </div><!-- end paging -->
             
             <div class="ssign">
-				<a href="ProductAdd" class="signup">상품등록</a>
+				<a href="OptAdd" class="signup">옵션생성</a>
 			</div>
-			
+            
         </div><!-- end pagesign -->
 			</div><!-- end main1 -->
 		</div><!-- end header -->

@@ -4,12 +4,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="CategoryMapper">
 
+<select id="categorylist" resultType="CategoryDTO">
+select ctno, ctnm
+from category
+</select>
+
 <select id="selectAll" resultType="CategoryDTO" parameterType="string">
 select ctno, ctnm
 from category
 </select>
 
-<select id="CategoryRetrieve" parameterType="string" resultType="CategoryDTO">
+<select id="categoryedit" parameterType="string" resultType="CategoryDTO">
 select ctno,ctnm
 from category
 where ctno=#{ctno}
@@ -23,13 +28,13 @@ ctnm = #{ctnm}
 where ctno = #{ctno}
 </update>
 
-<delete id="categoryDel" parameterType="String">
+<delete id="categoryDelete" parameterType="CategoryDTO">
 delete 
 from category
 where ctno = #{ctno}
 </delete>
 
-<insert id="categoryAdd" parameterType="CategoryDTO">
+<insert id="categoryadd" parameterType="CategoryDTO">
 insert into category (ctno,ctnm)
                values((select nvl(max(ctno),0)+1 from category),#{ctnm})
 </insert>
